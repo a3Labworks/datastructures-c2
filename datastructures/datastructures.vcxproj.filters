@@ -32,5 +32,11 @@
     <ClInclude Include="myrbtree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="bheap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mybheap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

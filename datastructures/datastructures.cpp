@@ -3,6 +3,8 @@
 #include "mybtree.h"
 #include "rbtree.h"
 #include "myrbtree.h"
+#include "bheap.h"
+#include "mybheap.h"
 
 
 void runRBTree()
@@ -55,6 +57,14 @@ void runBTree(int degree)
 	t.insert(7);
 	t.insert(17);
 
+
+	t.insert(32);
+	t.insert(41);
+	t.insert(14);
+	t.insert(27);
+	t.insert(2);
+	t.insert(16);
+
 	BTreePrinter printer;
 	cout << "1) The constucted tree is: \n";
 	printer.print(t);
@@ -101,9 +111,40 @@ void runMyBTree(int degree)
 	cout << "\n";
 }
 
+void runBHeap() {
+	BinomialHeap heap1;
+	BinomialHeap heap2;
+	heap1.createSampleHeap2();
+	heap2.createSampleHeap3();
+
+	heap1.merge(heap2);
+	cout << "Result after enqueue:" << "\n====================\n";
+	heap1.printHeap();
+
+	heap1.deleteMin();
+	cout << "Result after delete-min:" << "\n====================\n";
+	heap1.printHeap();
+}
+
+void runMyBHeap() {
+	MyBinomialHeap heap1;
+	MyBinomialHeap heap2;
+	heap1.createSampleHeap2();
+	heap2.createSampleHeap3();
+
+	heap1.merge(heap2);
+	cout << "Your Result after enqueue:" << "\n====================\n";
+	heap1.printHeap();
+
+	heap1.deleteMin();
+	cout << "Your Result after delete-min:" << "\n====================\n";
+	heap1.printHeap();
+}
+
 int main(int argc, char* argv[]) {
-	runRBTree(); runMyRBTree();	
-	runBTree(2); runMyBTree(2);
+	//runRBTree(); runMyRBTree();	
+	//runBTree(2); runMyBTree(2);
+	runBHeap(); runMyBHeap();
 }
 
 

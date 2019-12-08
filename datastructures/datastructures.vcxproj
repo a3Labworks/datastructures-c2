@@ -154,7 +154,9 @@
     <ClCompile Include="datastructures.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bheap.h" />
     <ClInclude Include="btree.h" />
+    <ClInclude Include="mybheap.h" />
     <ClInclude Include="mybtree.h" />
     <ClInclude Include="myrbtree.h" />
     <ClInclude Include="rbtree.h" />
